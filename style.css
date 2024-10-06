@@ -146,6 +146,11 @@ html {
 }
 
 /* OUR CLASSES SECTİON */
+
+.our-classes{
+    padding: 3rem;
+}
+
 .btns {
     display: flex;
     justify-content: center;
@@ -324,6 +329,7 @@ html {
     justify-content: center;
     align-items: center;
     background-color: var(--fresh-color);
+    padding: 3rem;
 }
 
 .title{
@@ -417,12 +423,16 @@ html {
 
 /* PURCHASE SECTION */
 
+.purchase{
+    padding: 3rem;
+}
 .cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 6rem;
     color: var(--gray-color);
+    
 }
 .card {
     text-align: center;
@@ -464,4 +474,123 @@ html {
     border-bottom-right-radius: 1rem;
     background-color: var(--blue-color);
     color: var(--text-color);
+}
+
+/* REVIEW CLIENT SECTION */
+.review-client {
+    background-color: var(--fresh-color);
+    padding: 3rem;
+}
+.client {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7rem;
+    margin-top: 3rem;
+}
+.client-head {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 7rem;
+    color: var(--gray-color);
+}
+.client-img {
+    border-radius: 50%;
+    height: 5rem;
+}
+.client-p {
+    line-height: 2rem;
+    width: 40rem;
+    height: 10rem;
+    background-color: var(--blue-color);
+    padding: 1rem;
+    margin-top: 1rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+}
+.client-title {
+    display: flex;
+}
+.client-p::after {
+    content:"";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top:100%;
+    left:0;
+    background-color: #6c97e6;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+.client-head::after {
+    content:"";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top:100%;
+    right: 0;
+    background-color:  #6c97e6;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+/* CONTACT US SECTION */
+.contact {
+    color: var(--gray-color);
+    font-weight: bold;
+}
+.title {
+    font-size: 2.5rem;
+    color: var(--gray-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top:5rem;
+    padding-bottom: 5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+    
+}
+.email {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 1.5rem;
+}
+.email p {
+    font-size: 1.5rem;
+}
+.contact-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin-bottom: 7rem;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.form  input,textarea {
+    border: none;
+    background-color: var(--fresh-color);
+    padding: 1.1rem 2.1rem;
+    resize: none;
+    border-radius: 0.5rem;
+}
+.appointment p {
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
