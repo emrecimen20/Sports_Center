@@ -7,6 +7,8 @@ const classesBtnImg = document.getElementById("classes-img");
 let btns = document.querySelector("#btns");
 let reverseDiv = document.getElementById("btns");
 
+
+// I created function one by one to show clicked content.
 const showYoga = () => {
     classesBtnH.textContent = "Why Should You Do Yoga?";
     classesBtnImg.src = "images/yoga.jpg";
@@ -32,6 +34,7 @@ const showStretch = () => {
     classesBtnP.innerHTML = "Monday-Wednesday: 8.00am - 10.00am <br>Thursday-Friday: 10.00am- 12.00pm"
 }
 
+
 btns.addEventListener("click", (event) => {
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
@@ -42,6 +45,8 @@ btns.addEventListener("click", (event) => {
         this.classList.add('selected');
       });
     });
+
+    // I used the switch-case structure to call that function for whatever content the button was clicked on.
     const btnId = event.target.id;
     switch (btnId) {
         case "yoga-btn" :
@@ -61,7 +66,7 @@ btns.addEventListener("click", (event) => {
     }
 })
 
-//BMI calculatin operations
+// BMI calculatin operations
 document.getElementById("weight").addEventListener("input", calculator);
 document.getElementById("height").addEventListener("input", calculator);
 
@@ -81,7 +86,7 @@ function calculator() {
         var inputValue = parseFloat(resultInput.textContent); 
         var element = document.querySelector(".after"); 
 
-       
+        // Scale to show bmi results.
         if (inputValue < 18.5 ) {
             element.style.setProperty('--after-left', '10%');
         } else if (inputValue < 25) {
@@ -95,3 +100,8 @@ function calculator() {
         }
     }
 }
+
+// To open a menu when you click on the hamburger menu icon in mobile view.
+document.getElementById("mobile-menu").addEventListener("click", function () {
+    document.getElementById("main-navbar").classList.toggle("show-menu");
+});

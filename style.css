@@ -68,6 +68,12 @@ html {
     padding-right: 3rem;
 } 
 
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding-right: 3rem;
+} 
+
 /* HERO SECTİON */
 .hero {
     display: flex;
@@ -593,4 +599,104 @@ html {
     font-size: 2.1rem;
     margin-bottom: 2rem;
     text-align: center;
+}
+
+/* FOOTER SECTION */
+footer {
+    padding: 1rem 18rem;
+    font-size: 1.2rem;
+    background-color: var(--blue-color);
+    color: var(--text-color);
+    
+}
+.footer-links  div  a {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.footer-links p{
+    font-size: 2rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap:10rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+
+@media screen and (max-width: 576px) {
+   
+    
+    header nav {
+        display: none;
+    }
+
+    /* FOR RESPONSIVE DESIGN */
+    .hamburger-menu {
+        position: relative;
+        display: flex;
+        color: var(--text-color);
+    }
+    .show-menu {
+        display: flex;
+        position: absolute;
+        top: 8rem;
+        right:4rem;
+        flex-direction: column;
+        padding: 2rem 2rem;
+        text-align: center;
+        animation: slideIn 0.5s ease-in-out;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #navbar a {
+        padding: 0.5rem;
+        margin: 0.7rem;
+    }
+    
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+    footer {
+        padding: 1rem 3rem;
+    }
+    .calculator {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10rem;
+    }
+    .sign-btn {
+        padding: 0.5rem 1rem;
+        text-align: center;
+    }
+    .details-btn {
+        margin-left: 0.2rem;
+        text-align: center;
+    }
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .client {
+        gap: 2rem;
+    }
 }
